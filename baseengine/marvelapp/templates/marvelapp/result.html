@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block result %}
+<div class="card mx-auto">
+    <img src="{{ com_data.comic_img_url }}" class="card-img-top mx-auto mt-2" alt="{{ com_data.comic_name }}">
+    <div class="card-text text-center text-uppercase font-weight-bold">
+        <h3 class="mt-4">{{ com_data.comic_name }}</h3>
+        <h4 class="mt-2">{{ story_title }}</h4>
+    </div>
+    <div class="card-body">
+        {% if story_desc != '' %}
+            <p class="card-text"><b>Description: </b>{{ story_desc }}</p>
+        {% else %}
+            <p class="card-text">No description for this story</p>
+        {% endif %}
+    </div>
+</div>
+<h3 class="text-center">CHARACTERS IN STORY</h3>
+<div class="card-columns mt-2 mt-3">
+    {% for hero, img in heroes_data.items %}
+    <div class="card p-3">
+        <img src="{{ img }}" class="card-img-top" alt="{{ hero }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ hero }}</h5>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

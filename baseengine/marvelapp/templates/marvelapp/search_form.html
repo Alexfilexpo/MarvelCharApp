@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block form %}
+<div class="card text-center mx-auto mt-5" style="max-width:30rem;">
+    <div class="card-header">
+        Look for your hero!
+    </div>
+    <div class="card-body">
+        <form action="{% url 'search_form_url' %}" method="post">
+            {% csrf_token %}
+            {{ form.name }}
+            <button type="submit" class="btn btn-primary mt-2">Get random story!</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
