@@ -1,0 +1,12 @@
+certifi==2019.9.11
+chardet==3.0.4
+decorator==4.4.1
+Django==2.2.7
+idna==2.8
+jmespath==0.9.4
+ply==3.11
+pytz==2019.3
+requests==2.22.0
+six==1.13.0
+sqlparse==0.3.0
+urllib3==1.25.6

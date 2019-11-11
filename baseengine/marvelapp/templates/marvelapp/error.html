@@ -1,0 +1,9 @@
+{% extends 'marvelapp/search_form.html' %}
+
+{% block error %}
+<div class="alert alert-danger mt-5" role="alert">
+    <h4 class="alert-heading">OH NO!</h4>
+    <p>Looks like the HERO you entered - doesn't exist!!!</p>
+    <p>Maybe you should look at the parallel universe :)</p>
+</div>
+{% endblock %}
