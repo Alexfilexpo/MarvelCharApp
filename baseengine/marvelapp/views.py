@@ -36,10 +36,7 @@ class SearchForm(View):
             (bool) - True if there is any results, False - if not
         """
         isresults = jmespath.search('data.results', response)
-        if not isresults:
-            return False
-        else:
-            return True
+        return bool(isresults)
 
     def edit_req_param(self, name, value):
         """
